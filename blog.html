@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | AURA - Ethical Hacker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="matrix-bg" id="matrixBg"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-cartoon">
+                    <svg class="hacker-cartoon-logo" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="30" cy="38" rx="18" ry="20" fill="#1a1a2e"/>
+                        <ellipse cx="30" cy="32" rx="16" ry="14" fill="#252540"/>
+                        <ellipse cx="30" cy="35" rx="12" ry="10" fill="#0a0a15"/>
+                        <ellipse cx="25" cy="34" rx="3" ry="2" fill="#00ff88" class="glow-eye"/>
+                        <ellipse cx="35" cy="34" rx="3" ry="2" fill="#00ff88" class="glow-eye"/>
+                        <rect x="20" y="31" width="20" height="6" rx="3" fill="none" stroke="#00ff88" stroke-width="1.5" opacity="0.8"/>
+                        <path d="M15 25 Q30 15 45 25" stroke="#00ff88" stroke-width="1" fill="none" opacity="0.5"/>
+                    </svg>
+                </div>
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">AURA</span>
+                <span class="logo-bracket">]</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="blog-hero-content">
+            <span class="blog-hero-tag">// BLOGS & TUTORIALS</span>
+            <h1 class="blog-hero-title">The <span class="highlight">Blog</span></h1>
+            <p class="blog-hero-subtitle">Explore the depths of cybersecurity, ethical hacking, and digital forensics.</p>
+        </div>
+    </section>
+
+    <!-- Blog Filter -->
+    <section class="blog-filter">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Posts</button>
+            <button class="filter-btn" data-filter="network">Network Security</button>
+            <button class="filter-btn" data-filter="web">Web Security</button>
+            <button class="filter-btn" data-filter="malware">Malware Analysis</button>
+            <button class="filter-btn" data-filter="ctf">CTF Writeups</button>
+            <button class="filter-btn" data-filter="tools">Tools & Scripts</button>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="blog-posts">
+        <div class="posts-container">
+
+            <!-- Post 1 -->
+            <article class="blog-card" data-category="network">
+                <div class="blog-card-image">
+                    <div class="blog-card-overlay"></div>
+                    <i class="fas fa-network-wired"></i>
+                    <span class="blog-card-category">Network Security</span>
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> April 2, 2026</span>
+                        <span><i class="far fa-clock"></i> 8 min read</span>
+                    </div>
+                    <h2 class="blog-card-title">Advanced Network Penetration Testing Guide</h2>
+                    <p class="blog-card-excerpt">Master the art of network reconnaissance, port scanning, and exploitation using industry-standard tools like Nmap, Metasploit, and Burp Suite.</p>
+                    <div class="blog-card-footer">
+                        <div class="blog-card-author">
+                            <div class="author-avatar"><i class="fas fa-user-secret"></i></div>
+                            <span>AURA</span>
+                        </div>
+                        <a href="#" class="blog-card-read">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 2 -->
+            <article class="blog-card" data-category="malware">
+                <div class="blog-card-image">
+                    <div class="blog-card-overlay"></div>
+                    <i class="fas fa-virus"></i>
+                    <span class="blog-card-category">Malware Analysis</span>
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> March 28, 2026</span>
+                        <span><i class="far fa-clock"></i> 12 min read</span>
+                    </div>
+                    <h2 class="blog-card-title">Reverse Engineering: A Deep Dive</h2>
+                    <p class="blog-card-excerpt">Learn the fundamentals of reverse engineering malware. Understand assembly basics, debugging techniques, and static/dynamic analysis methods.</p>
+                    <div class="blog-card-footer">
+                        <div class="blog-card-author">
+                            <div class="author-avatar"><i class="fas fa-user-secret"></i></div>
+                            <span>AURA</span>
+                        </div>
+                        <a href="#" class="blog-card-read">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 3 -->
+            <article class="blog-card" data-category="web">
+                <div class="blog-card-image">
+                    <div class="blog-card-overlay"></div>
+                    <i class="fas fa-globe"></i>
+                    <span class="blog-card-category">Web Security</span>
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> March 20, 2026</span>
+                        <span><i class="far fa-clock"></i> 10 min read</span>
+                    </div>
+                    <h2 class="blog-card-title">Web Application Bug Bounty Hunting</h2>
+                    <p class="blog-card-excerpt">Start your bug bounty journey with this comprehensive guide. Learn about OWASP Top 10, reconnaissance techniques, and effective vulnerability reporting.</p>
+                    <div class="blog-card-footer">
+                        <div class="blog-card-author">
+                            <div class="author-avatar"><i class="fas fa-user-secret"></i></div>
+                            <span>AURA</span>
+                        </div>
+                        <a href="#" class="blog-card-read">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 4 -->
+            <article class="blog-card" data-category="ctf">
+                <div class="blog-card-image">
+                    <div class="blog-card-overlay"></div>
+                    <i class="fas fa-flag"></i>
+                    <span class="blog-card-category">CTF Writeups</span>
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> March 15, 2026</span>
+                        <span><i class="far fa-clock"></i> 15 min read</span>
+                    </div>
+                    <h2 class="blog-card-title">CTF Challenge: Breaking the Encryption</h2>
+                    <p class="blog-card-excerpt">A detailed walkthrough of a challenging cryptography CTF problem. Learn encryption techniques, cryptanalysis, and creative problem-solving approaches.</p>
+                    <div class="blog-card-footer">
+                        <div class="blog-card-author">
+                            <div class="author-avatar"><i class="fas fa-user-secret"></i></div>
+                            <span>AURA</span>
+                        </div>
+                        <a href="#" class="blog-card-read">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 5 -->
+            <article class="blog-card" data-category="tools">
+                <div class="blog-card-image">
+                    <div class="blog-card-overlay"></div>
+                    <i class="fas fa-tools"></i>
+                    <span class="blog-card-category">Tools & Scripts</span>
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> March 10, 2026</span>
+                        <span><i class="far fa-clock"></i> 6 min read</span>
+                    </div>
+                    <h2 class="blog-card-title">Building Your Home Lab for Hacking</h2>
+                    <p class="blog-card-excerpt">Set up your own penetration testing lab using VirtualBox, Kali Linux, and vulnerable target machines. The complete guide to building a safe hacking environment.</p>
+                    <div class="blog-card-footer">
+                        <div class="blog-card-author">
+                            <div class="author-avatar"><i class="fas fa-user-secret"></i></div>
+                            <span>AURA</span>
+                        </div>
+                        <a href="#" class="blog-card-read">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 6 -->
+            <article class="blog-card" data-category="network">
+                <div class="blog-card-image">
+                    <div class="blog-card-overlay"></div>
+                    <i class="fas fa-shield-halved"></i>
+                    <span class="blog-card-category">Network Security</span>
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> March 5, 2026</span>
+                        <span><i class="far fa-clock"></i> 9 min read</span>
+                    </div>
+                    <h2 class="blog-card-title">Firewall Bypass Techniques & Detection Evasion</h2>
+                    <p class="blog-card-excerpt">Understanding how next-generation firewalls work and techniques to bypass them during authorized penetration testing engagements.</p>
+                    <div class="blog-card-footer">
+                        <div class="blog-card-author">
+                            <div class="author-avatar"><i class="fas fa-user-secret"></i></div>
+                            <span>AURA</span>
+                        </div>
+                        <a href="#" class="blog-card-read">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 7 -->
+            <article class="blog-card" data-category="malware">
+                <div class="blog-card-image">
+                    <div class="blog-card-overlay"></div>
+                    <i class="fas fa-bug"></i>
+                    <span class="blog-card-category">Malware Analysis</span>
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> February 28, 2026</span>
+                        <span><i class="far fa-clock"></i> 11 min read</span>
+                    </div>
+                    <h2 class="blog-card-title">Analyzing Ransomware: A Case Study</h2>
+                    <p class="blog-card-excerpt">Deep dive into a real ransomware sample. Learn behavioral analysis, static analysis with IDA Pro, and understanding the encryption mechanism.</p>
+                    <div class="blog-card-footer">
+                        <div class="blog-card-author">
+                            <div class="author-avatar"><i class="fas fa-user-secret"></i></div>
+                            <span>AURA</span>
+                        </div>
+                        <a href="#" class="blog-card-read">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 8 -->
+            <article class="blog-card" data-category="web">
+                <div class="blog-card-image">
+                    <div class="blog-card-overlay"></div>
+                    <i class="fas fa-key"></i>
+                    <span class="blog-card-category">Web Security</span>
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> February 20, 2026</span>
+                        <span><i class="far fa-clock"></i> 7 min read</span>
+                    </div>
+                    <h2 class="blog-card-title">SQL Injection Mastery: From Basics to Advanced</h2>
+                    <p class="blog-card-excerpt">Comprehensive guide to SQL injection attacks. Covering error-based, union-based, blind SQLi, and time-based techniques with practical examples.</p>
+                    <div class="blog-card-footer">
+                        <div class="blog-card-author">
+                            <div class="author-avatar"><i class="fas fa-user-secret"></i></div>
+                            <span>AURA</span>
+                        </div>
+                        <a href="#" class="blog-card-read">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Stay in the <span class="highlight">Loop</span></h2>
+                <p class="newsletter-text">Subscribe to receive the latest cybersecurity insights, CTF writeups, and ethical hacking tutorials directly to your inbox.</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" class="newsletter-input">
+                <button type="submit" class="newsletter-btn">
+                    <span>Subscribe</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-bracket">[</span>AURA<span class="logo-bracket">]</span>
+            </div>
+            <p class="footer-text">Securing the digital world, one vulnerability at a time.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="blog.html">Blog</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://instagram.com/gourav_kanaut" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://snapchat.com/add/gourav_bajwa05" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="mailto:gouravharmilap@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-copy">&copy; 2026 AURA. All rights reserved. | <span class="highlight">Ethical Hacking Blog</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
