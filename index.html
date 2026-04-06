@@ -3,36 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA | Ethical Hacker Blog</title>
+    <title>AURA | Ethical Hacker</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="matrix-bg" id="matrixBg"></div>
-    <div class="grid-overlay"></div>
+    <!-- Video Background -->
+    <video class="video-bg" autoplay muted loop playsinline>
+        <source src="hacker vid.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+    <!-- Subtle Grid Background -->
+    <div class="grid-bg"></div>
 
-    <!-- Navigation -->
+    <!-- Navigation - Liquid Glass -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <div class="logo-cartoon">
-                    <svg class="hacker-cartoon-logo" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Hoodie -->
-                        <ellipse cx="30" cy="38" rx="18" ry="20" fill="#1a1a2e"/>
-                        <ellipse cx="30" cy="32" rx="16" ry="14" fill="#252540"/>
-                        <!-- Face shadow -->
-                        <ellipse cx="30" cy="35" rx="12" ry="10" fill="#0a0a15"/>
-                        <!-- Glowing eyes -->
-                        <ellipse cx="25" cy="34" rx="3" ry="2" fill="#00ff88" class="glow-eye"/>
-                        <ellipse cx="35" cy="34" rx="3" ry="2" fill="#00ff88" class="glow-eye"/>
-                        <!-- Visor/glasses -->
-                        <rect x="20" y="31" width="20" height="6" rx="3" fill="none" stroke="#00ff88" stroke-width="1.5" opacity="0.8"/>
-                        <!-- Hood opening -->
-                        <path d="M15 25 Q30 15 45 25" stroke="#00ff88" stroke-width="1" fill="none" opacity="0.5"/>
-                    </svg>
-                </div>
                 <span class="logo-bracket">[</span>
                 <span class="logo-text">AURA</span>
                 <span class="logo-bracket">]</span>
@@ -43,73 +33,65 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="nav-toggle">
+            <button class="nav-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero - Split Screen, Left Aligned -->
     <section class="hero">
         <div class="hero-content">
-            <div class="glitch-wrapper">
-                <h1 class="glitch" data-text="AURA">AURA</h1>
-            </div>
-            <p class="hero-subtitle">
-                <span class="terminal-type" data-text="> Welcome to the underground_"></span>
-            </p>
-            <div class="hero-tagline">
-                <span class="tag-line"><i class="fas fa-shield-halved"></i> Ethical Hacking</span>
-                <span class="tag-line"><i class="fas fa-code"></i> Cybersecurity</span>
-                <span class="tag-line"><i class="fas fa-lock"></i> Penetration Testing</span>
-            </div>
-            <div class="hero-buttons">
+            <p class="hero-eyebrow">Ethical Hacking / Security Research</p>
+            <h1 class="hero-title">Securing the digital world, one bug at a time</h1>
+            <p class="hero-subtitle">I uncover vulnerabilities and help organizations strengthen their defenses. This is where I share insights, techniques, and discoveries from the trenches of cybersecurity.</p>
+            <div class="hero-cta">
                 <a href="blog.html" class="btn btn-primary">
-                    <span>Explore Blogs</span>
-                    <i class="fas fa-arrow-right"></i>
+                    Read the Blog
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </a>
                 <a href="#about" class="btn btn-secondary">
-                    <span>Learn More</span>
-                    <i class="fas fa-chevron-down"></i>
+                    Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
                 </a>
             </div>
         </div>
         <div class="hero-visual">
             <div class="code-window">
-                <div class="window-header">
-                    <span class="window-dot red"></span>
-                    <span class="window-dot yellow"></span>
-                    <span class="window-dot green"></span>
-                    <span class="window-title">aura@root:~#</span>
+                <div class="code-window-header">
+                    <span class="code-dot red"></span>
+                    <span class="code-dot yellow"></span>
+                    <span class="code-dot green"></span>
+                    <span class="code-title">mission.js</span>
                 </div>
-                <div class="window-content">
-                    <div class="code-line"><span class="code-comment"># Welcome to AURA</span></div>
-                    <div class="code-line"><span class="code-keyword">const</span> <span class="code-var">hacker</span> = {</div>
-                    <div class="code-line">&nbsp;&nbsp;name: <span class="code-string">"AURA"</span>,</div>
-                    <div class="code-line">&nbsp;&nbsp;mission: <span class="code-string">"Secure the digital world"</span>,</div>
-                    <div class="code-line">&nbsp;&nbsp;skills: [<span class="code-string">"Penetration Testing"</span>, <span class="code-string">"CTF"</span>, <span class="code-string">"Malware Analysis"</span>]</div>
+                <div class="code-body">
+                    <div class="code-line"><span class="code-comment">// security researcher</span></div>
+                    <div class="code-line"><span class="code-keyword">const</span> <span class="code-var">aura</span> = {</div>
+                    <div class="code-line">  focus: <span class="code-string">"Penetration Testing"</span>,</div>
+                    <div class="code-line">  tools: [<span class="code-string">"Burp Suite"</span>, <span class="code-string">"Nmap"</span>],</div>
+                    <div class="code-line">  ctfRank: <span class="code-string">"Global Top 100"</span>,</div>
+                    <div class="code-line">  mission: <span class="code-string">"Secure systems"</span></div>
                     <div class="code-line">};</div>
-                    <div class="code-line">&nbsp;</div>
-                    <div class="code-line"><span class="code-function">console.log</span>(<span class="code-string">"Access Granted"</span>);</div>
-                    <div class="cursor-blink">_</div>
+                    <div class="code-line"><span class="code-function">console</span>.<span class="code-function">log</span>(<span class="code-string">"Access granted"</span>);</div>
+                    <div class="code-line"><span class="cursor"></span></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="section about" id="about">
         <div class="section-header">
-            <span class="section-tag">// WHO AM I</span>
-            <h2 class="section-title">About <span class="highlight">AURA</span></h2>
+            <p class="section-eyebrow">// about</p>
+            <h2 class="section-title">Who is <span class="accent">AURA</span>?</h2>
         </div>
-        <div class="about-content">
+        <div class="about-grid">
             <div class="about-text">
-                <p>Welcome to <strong>AURA</strong>, your gateway to the world of ethical hacking and cybersecurity. Here, I share my journey, discoveries, and insights from the dark corners of the digital realm.</p>
-                <p>With a passion for uncovering vulnerabilities and securing systems, AURA serves as a platform to educate, inspire, and connect with fellow security enthusiasts. Every exploit taught here is one less vulnerability in the wild.</p>
-                <div class="about-stats">
+                <p>Welcome to <strong>AURA</strong>, your gateway to the world of ethical hacking and cybersecurity. I document my journey through the digital underground — from CTF competitions to real-world bug bounty hunting.</p>
+                <p>Every vulnerability I find is one less weapon in the wrong hands. This blog is my contribution to making the internet safer: detailed writeups, tool releases, and insights from the front lines of security research.</p>
+                <div class="stats-row">
                     <div class="stat-item">
                         <span class="stat-number" data-count="150">0</span>
                         <span class="stat-label">CTFs Won</span>
@@ -120,146 +102,205 @@
                     </div>
                     <div class="stat-item">
                         <span class="stat-number" data-count="50">0</span>
-                        <span class="stat-label">Tools Created</span>
+                        <span class="stat-label">Tools Built</span>
                     </div>
                 </div>
             </div>
-            <div class="about-visual">
-                <div class="profile-card">
-                    <div class="profile-image-wrapper">
-                        <img src="648527526_17854721898677856_1191413155906682444_n.jpg" alt="AURA Profile" class="profile-image">
-                    </div>
-                    <h3>AURA</h3>
-                    <p class="profile-role">Ethical Hacker</p>
-                    <div class="profile-badge">
-                        <i class="fas fa-check-circle"></i> Verified Security Researcher
-                    </div>
+            <div class="profile-card">
+                <img src="648527526_17854721898677856_1191413155906682444_n.jpg" alt="AURA" class="profile-img">
+                <h3 class="profile-name">AURA</h3>
+                <p class="profile-role">Security Researcher</p>
+                <div class="profile-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Verified Researcher
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Posts Section -->
-    <section class="featured" id="featured">
+    <!-- Featured Posts - Asymmetric Zig-Zag Grid -->
+    <section class="section featured" id="featured">
         <div class="section-header">
-            <span class="section-tag">// LATEST INTEL</span>
-            <h2 class="section-title">Featured <span class="highlight">Posts</span></h2>
+            <p class="section-eyebrow">// latest intel</p>
+            <h2 class="section-title">Featured <span class="accent">Posts</span></h2>
         </div>
         <div class="posts-grid">
-            <article class="post-card" data-aos="fade-up">
+            <article class="post-card reveal">
                 <div class="post-image">
-                    <div class="post-overlay">
-                        <span class="post-category">Network Security</span>
-                    </div>
-                    <div class="post-icon"><i class="fas fa-network-wired"></i></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                    <span class="post-cat">Network Security</span>
                 </div>
-                <div class="post-content">
+                <div class="post-body">
                     <div class="post-meta">
-                        <span><i class="far fa-calendar"></i> April 2, 2026</span>
-                        <span><i class="far fa-clock"></i> 8 min read</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            April 2, 2026
+                        </span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            8 min
+                        </span>
                     </div>
                     <h3 class="post-title">Advanced Network Penetration Testing Guide</h3>
-                    <p class="post-excerpt">Master the art of network reconnaissance and exploitation with industry-standard tools...</p>
-                    <a href="blog.html" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    <p class="post-excerpt">Master the art of network reconnaissance and exploitation with industry-standard tools and techniques.</p>
+                    <a href="blog.html" class="post-link">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
                 </div>
             </article>
 
-            <article class="post-card" data-aos="fade-up" data-aos-delay="100">
+            <article class="post-card reveal">
                 <div class="post-image">
-                    <div class="post-overlay">
-                        <span class="post-category">Malware Analysis</span>
-                    </div>
-                    <div class="post-icon"><i class="fas fa-virus"></i></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                    <span class="post-cat">Malware Analysis</span>
                 </div>
-                <div class="post-content">
+                <div class="post-body">
                     <div class="post-meta">
-                        <span><i class="far fa-calendar"></i> March 28, 2026</span>
-                        <span><i class="far fa-clock"></i> 12 min read</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            March 28, 2026
+                        </span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            12 min
+                        </span>
                     </div>
                     <h3 class="post-title">Reverse Engineering: A Deep Dive</h3>
-                    <p class="post-excerpt">Learn how to deconstruct malware and understand its behavior in sandboxed environments...</p>
-                    <a href="blog.html" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    <p class="post-excerpt">Learn how to deconstruct malware and understand its behavior in sandboxed environments.</p>
+                    <a href="blog.html" class="post-link">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
                 </div>
             </article>
 
-            <article class="post-card" data-aos="fade-up" data-aos-delay="200">
+            <article class="post-card reveal">
                 <div class="post-image">
-                    <div class="post-overlay">
-                        <span class="post-category">Web Security</span>
-                    </div>
-                    <div class="post-icon"><i class="fas fa-globe"></i></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="post-cat">Web Security</span>
                 </div>
-                <div class="post-content">
+                <div class="post-body">
                     <div class="post-meta">
-                        <span><i class="far fa-calendar"></i> March 20, 2026</span>
-                        <span><i class="far fa-clock"></i> 10 min read</span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            March 20, 2026
+                        </span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            10 min
+                        </span>
                     </div>
                     <h3 class="post-title">Web Application Bug Bounty Hunting</h3>
-                    <p class="post-excerpt">Start your bug bounty journey with this comprehensive guide to finding vulnerabilities...</p>
-                    <a href="blog.html" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    <p class="post-excerpt">Start your bug bounty journey with this comprehensive guide to finding vulnerabilities.</p>
+                    <a href="blog.html" class="post-link">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="post-card reveal">
+                <div class="post-image">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    <span class="post-cat">CTF Writeups</span>
+                </div>
+                <div class="post-body">
+                    <div class="post-meta">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            March 15, 2026
+                        </span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            6 min
+                        </span>
+                    </div>
+                    <h3 class="post-title">HackTheBox Machine Walkthroughs</h3>
+                    <p class="post-excerpt">Detailed writeups for intermediate to advanced HackTheBox machines with multiple attack vectors.</p>
+                    <a href="blog.html" class="post-link">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
                 </div>
             </article>
         </div>
         <div class="section-cta">
             <a href="blog.html" class="btn btn-primary">
-                <span>View All Posts</span>
-                <i class="fas fa-th"></i>
+                View All Posts
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
             </a>
         </div>
     </section>
 
     <!-- Social Media Section -->
-    <section class="social" id="contact">
+    <section class="section social" id="contact">
         <div class="section-header">
-            <span class="section-tag">// CONNECT WITH ME</span>
-            <h2 class="section-title">Social <span class="highlight">Media</span></h2>
+            <p class="section-eyebrow">// connect</p>
+            <h2 class="section-title">Find Me <span class="accent">Online</span></h2>
         </div>
         <div class="social-grid">
-            <a href="https://instagram.com/gourav_kanaut" target="_blank" class="social-card instagram">
-                <div class="social-icon"><i class="fab fa-instagram"></i></div>
+            <a href="https://instagram.com/gourav_kanaut" target="_blank" rel="noopener" class="social-card instagram">
+                <div class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </div>
                 <div class="social-info">
                     <h3>Instagram</h3>
                     <p>@gourav_kanaut</p>
                 </div>
-                <div class="social-arrow"><i class="fas fa-external-link-alt"></i></div>
+                <div class="social-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </div>
             </a>
 
-            <a href="https://snapchat.com/add/gourav_bajwa05" target="_blank" class="social-card snapchat">
-                <div class="social-icon"><i class="fab fa-snapchat-ghost"></i></div>
+            <a href="https://snapchat.com/add/gourav_bajwa05" target="_blank" rel="noopener" class="social-card snapchat">
+                <div class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M9.5 9c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5S13.38 6.5 12 6.5 9.5 7.62 9.5 9z"/><path d="M14.5 9c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5S18.38 6.5 17 6.5 14.5 7.62 14.5 9z"/></svg>
+                </div>
                 <div class="social-info">
                     <h3>Snapchat</h3>
                     <p>@gourav_bajwa05</p>
                 </div>
-                <div class="social-arrow"><i class="fas fa-external-link-alt"></i></div>
+                <div class="social-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </div>
             </a>
 
             <a href="#" class="social-card youtube disabled">
-                <div class="social-icon"><i class="fab fa-youtube"></i></div>
+                <div class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                </div>
                 <div class="social-info">
                     <h3>YouTube</h3>
                     <p>Coming Soon</p>
                 </div>
-                <div class="social-arrow"><i class="fas fa-clock"></i></div>
+                <div class="social-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
             </a>
 
             <a href="mailto:gouravharmilap@gmail.com" class="social-card email">
-                <div class="social-icon"><i class="fas fa-envelope"></i></div>
+                <div class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
                 <div class="social-info">
                     <h3>Email</h3>
                     <p>gouravharmilap@gmail.com</p>
                 </div>
-                <div class="social-arrow"><i class="fas fa-external-link-alt"></i></div>
+                <div class="social-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
             </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
+        <div class="footer-inner">
             <div class="footer-logo">
                 <span class="logo-bracket">[</span>AURA<span class="logo-bracket">]</span>
             </div>
-            <p class="footer-text">Securing the digital world, one vulnerability at a time.</p>
+            <p class="footer-tagline">Securing the digital world, one vulnerability at a time.</p>
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="blog.html">Blog</a>
@@ -267,42 +308,22 @@
                 <a href="#contact">Contact</a>
             </div>
             <div class="footer-social">
-                <a href="https://instagram.com/gourav_kanaut" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://snapchat.com/add/gourav_bajwa05" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="mailto:gouravharmilap@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://instagram.com/gourav_kanaut" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="https://snapchat.com/add/gourav_bajwa05" target="_blank" rel="noopener" aria-label="Snapchat">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M9.5 9c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5S13.38 6.5 12 6.5 9.5 7.62 9.5 9z"/><path d="M14.5 9c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5S18.38 6.5 17 6.5 14.5 7.62 14.5 9z"/></svg>
+                </a>
+                <a href="#" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                </a>
+                <a href="mailto:gouravharmilap@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </a>
             </div>
-            <p class="footer-copy">&copy; 2026 AURA. All rights reserved. | <span class="highlight">Ethical Hacking Blog</span></p>
+            <p class="footer-copy">2026 AURA. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Floating Hacker Doll -->
-    <div class="corner-hacker" id="cornerHacker">
-        <svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
-            <!-- Body sitting -->
-            <ellipse cx="50" cy="110" rx="30" ry="25" fill="#1a1a2e"/>
-            <!-- Legs crossed -->
-            <ellipse cx="35" cy="130" rx="15" ry="8" fill="#12121a" stroke="#00ff88" stroke-width="1"/>
-            <ellipse cx="65" cy="130" rx="15" ry="8" fill="#12121a" stroke="#00ff88" stroke-width="1"/>
-            <!-- Head -->
-            <circle cx="50" cy="60" r="30" fill="#1a1a2e"/>
-            <!-- Hoodie top -->
-            <path d="M20 60 Q50 25 80 60" fill="#252540"/>
-            <!-- Face (dark) -->
-            <circle cx="50" cy="65" r="22" fill="#0a0a15"/>
-            <!-- Glowing eyes that follow cursor -->
-            <ellipse cx="40" cy="62" rx="5" ry="4" fill="#00ff88" class="hacker-eyes" id="hackerEyeLeft"/>
-            <ellipse cx="60" cy="62" rx="5" ry="4" fill="#00ff88" class="hacker-eyes" id="hackerEyeRight"/>
-            <!-- Visor/glasses frame -->
-            <rect x="30" y="55" width="40" height="14" rx="5" fill="none" stroke="#00ff88" stroke-width="2" opacity="0.8"/>
-            <!-- Hood strings -->
-            <line x1="42" y1="35" x2="38" y2="45" stroke="#00ff88" stroke-width="2" opacity="0.6"/>
-            <line x1="58" y1="35" x2="62" y2="45" stroke="#00ff88" stroke-width="2" opacity="0.6"/>
-            <!-- Arms/hands on lap -->
-            <ellipse cx="30" cy="100" rx="10" ry="6" fill="#252540"/>
-            <ellipse cx="70" cy="100" rx="10" ry="6" fill="#252540"/>
-        </svg>
-    </div>
 
     <script src="script.js"></script>
 </body>
