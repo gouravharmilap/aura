@@ -137,14 +137,16 @@ function initBlogFilter() {
     });
 }
 
-// Newsletter form
+// Newsletter form - standard Formspree HTML form
 function initNewsletterForm() {
     const form = document.getElementById('newsletterForm');
     const messageEl = document.getElementById('newsletterMessage');
 
     if (!form) return;
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
         const input = form.querySelector('#emailInput');
         const btn = form.querySelector('.newsletter-btn');
 
@@ -161,23 +163,45 @@ function initNewsletterForm() {
             return;
         }
 
-        if (form.getAttribute('action').includes('YOUR_MAILCHIMP_URL_HERE')) {
-            e.preventDefault();
-            btn.innerHTML = '<span>Subscribing...</span>';
+        btn.innerHTML = '<span>Subscribing...</span>';
+        btn.disabled = true;
 
-            setTimeout(() => {
+        // Standard fetch POST to Formspree
+        const formData = new FormData();
+        formData.append('email', input.value);
+
+        try {
+            const res = await fetch('https://formspree.io/f/xpqokrdr', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (res.ok) {
                 btn.innerHTML = '<span>Subscribed</span>';
                 input.value = '';
                 if (messageEl) {
                     messageEl.textContent = 'Thanks for subscribing!';
                     messageEl.className = 'newsletter-message success';
                 }
-
                 setTimeout(() => {
                     btn.innerHTML = `<span>Subscribe</span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>`;
+                    btn.disabled = false;
                     messageEl.className = 'newsletter-message';
                 }, 3000);
-            }, 1500);
+            } else {
+                throw new Error('Server error');
+            }
+        } catch (err) {
+            btn.innerHTML = `<span>Subscribe</span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>`;
+            btn.disabled = false;
+            if (messageEl) {
+                messageEl.textContent = 'Something went wrong. Please try again.';
+                messageEl.className = 'newsletter-message error';
+            }
+            setTimeout(() => {
+                if (messageEl) messageEl.className = 'newsletter-message';
+            }, 3000);
         }
     });
 }
